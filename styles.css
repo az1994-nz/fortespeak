@@ -21,3 +21,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
 
 .contact-form h3{font:32px Georgia,serif;margin:0 0 28px}.optional{font-weight:400}.honeypot{display:none!important}.contact-form [data-state="error"]{color:#962f1e}.contact-form [data-state="success"]{color:var(--teal)}
+
+/* Supplied personal photographs; blending is applied only in the page. */
+.hero{grid-template-columns:1.2fr 1fr;gap:5vw}.hero-photo{margin:0;position:relative;z-index:1;min-width:0;align-self:center}.hero-photo img{display:block;width:100%;height:auto;border-radius:6px}.hero-photo figcaption{font-size:11px;line-height:1.6;letter-spacing:.06em;color:#d9e8e5;padding-top:14px}.story-photo{margin:35px 0 0;max-width:430px;isolation:isolate}.story-photo img{display:block;width:100%;height:auto;opacity:.85;mask-image:linear-gradient(to bottom,#000 65%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 65%,transparent 100%);border-radius:6px}.story-grid{gap:6vw}.story-grid>.prose{align-self:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-photo{width:100%;max-width:520px}.story-photo{max-width:380px}}
