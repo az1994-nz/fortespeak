@@ -25,3 +25,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 /* Supplied personal photographs; blending is applied only in the page. */
 .hero{grid-template-columns:1.2fr 1fr;gap:5vw}.hero-photo{margin:0;position:relative;z-index:1;min-width:0;align-self:center}.hero-photo img{display:block;width:100%;height:auto;border-radius:6px}.hero-photo figcaption{font-size:11px;line-height:1.6;letter-spacing:.06em;color:#d9e8e5;padding-top:14px}.story-photo{margin:35px 0 0;max-width:430px;isolation:isolate}.story-photo img{display:block;width:100%;height:auto;opacity:.85;mask-image:linear-gradient(to bottom,#000 65%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 65%,transparent 100%);border-radius:6px}.story-grid{gap:6vw}.story-grid>.prose{align-self:center}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-photo{width:100%;max-width:520px}.story-photo{max-width:380px}}
+
+/* Sculpted portrait frame: an organic arch, offset mint outline and dot motif. */
+.hero{grid-template-columns:1.12fr 1fr;gap:6vw}
+.hero-photo{isolation:isolate;padding:12px 10px 0 0;margin:12px 0 0 12px}
+.hero-photo::before{content:"";position:absolute;z-index:-1;inset:-12px -15px 48px -18px;border:1px solid rgba(159,213,198,.65);border-radius:46% 14% 38% 13% / 34% 13% 30% 15%;transform:rotate(-5deg);pointer-events:none}
+.hero-photo::after{content:"";position:absolute;z-index:-2;right:-28px;bottom:35px;width:150px;height:170px;background:radial-gradient(circle,var(--mint) 1.4px,transparent 1.8px) 0 0 / 13px 13px;opacity:.55;pointer-events:none}
+.hero-photo img{aspect-ratio:3/4;object-fit:cover;border-radius:42% 10% 34% 10% / 30% 12% 24% 12%;box-shadow:14px 18px 0 rgba(159,213,198,.12),0 24px 65px rgba(3,24,29,.2)}
+.hero-photo figcaption{position:relative;padding:28px 10px 0 12px;max-width:95%;line-height:1.7}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-photo{max-width:480px;width:calc(100% - 28px);margin:22px auto 0}.hero-photo::after{right:-20px}}
+@media(max-width:600px){.hero-photo{max-width:380px;padding-right:6px}.hero-photo::before{inset:-9px -8px 62px -12px}.hero-photo::after{width:105px;height:125px;right:-13px;bottom:52px}.hero-photo figcaption{font-size:10px;padding-top:25px}}
