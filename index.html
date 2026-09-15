@@ -24,6 +24,19 @@
     .story .story-title { margin-bottom: 18px; }
     .story-introduction { font: clamp(18px, 1.8vw, 25px)/1.6 Georgia, serif; margin: 0 0 42px; white-space: nowrap; color: var(--ink); }
     @media (max-width: 900px) { .story-introduction { white-space: normal; } }
+    .speech-showcase { margin-top: 80px; padding: 48px; display: grid; grid-template-columns: .7fr 1.3fr; gap: 42px; align-items: center; border-radius: 18px; background: linear-gradient(125deg, var(--navy), #07545b); color: white; box-shadow: 0 20px 50px rgba(13,44,54,.12); }
+    .speech-copy, .speech-screen { min-width: 0; }
+    .speech-copy .eyebrow { font-size: 10px; line-height: 1.7; margin-bottom: 22px; }
+    .speech-copy h3 { font: 400 clamp(38px,4vw,58px)/1.05 Georgia,serif; letter-spacing: -.035em; margin: 0 0 24px; }
+    .speech-copy h3 em { color: var(--mint); }
+    .speech-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.75; color: #d9e8e5; }
+    .speech-youtube-link { display: inline-flex; align-items: center; gap: 18px; padding: 13px 0; margin-top: 8px; border-bottom: 1px solid var(--mint); color: var(--mint); font-size: 14px; font-weight: 700; }
+    .speech-player { aspect-ratio: 16/9; min-height: 200px; border: 1px solid #9fd5c650; border-radius: 10px; overflow: hidden; background: #061c22; }
+    .speech-player iframe { display: block; width: 100%; height: 100%; min-height: 200px; border: 0; }
+    .speech-caption { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; margin: 16px 0 0; color: var(--mint); font-size: 11px; line-height: 1.6; }
+    .speech-caption span { color: #d9e8e5; }
+    @media (max-width: 900px) { .speech-showcase { grid-template-columns: 1fr; gap: 28px; padding: 32px; } }
+    @media (max-width: 600px) { .speech-showcase { padding: 24px 16px; margin-top: 52px; } .speech-copy { padding: 0 4px; } }
   </style>
 </head>
 <body>
@@ -42,8 +55,18 @@
     <p class="eyebrow dark">My journey</p><h2 class="story-title">From breathing to <em>Speaking</em></h2>
     <p class="story-introduction">My work began with breath. It grew into a belief in what our voices can do.</p>
     <div class="story-grid"><figure class="story-photo"><img src="assets/story.webp" alt="Portrait of Fazla Dulficar" width="1600" height="1559" loading="lazy" decoding="async"></figure><div class="prose"><p class="lead"><strong>I made history as the first woman from New Zealand Toastmasters District 72 to reach the International Speech Contest Semifinals in 2025.</strong></p><p><strong>But that achievement is only one part of my story.</strong></p><p><strong>Every voice has a story. Sometimes, finding it requires courage, resilience and a willingness to step beyond our comfort zone.</strong></p><p><strong>My passion for public speaking began in childhood and continued through school debating, where I served as a debate team captain.</strong></p><p><strong>After migrating to New Zealand, I experienced the challenge of building a new life and finding the confidence to express myself in a new environment. It taught me that finding your voice is something we grow into.</strong></p><p><strong>As a Respiratory Scientist, I’ve always been fascinated by the power of breathing. Over time, I discovered the connection between breath, voice and presence. That connection inspired my 2025 Toastmasters journey and my message, “Our Power Within.”</strong></p><p><strong>Today, through ForteSpeak, I help people find their message, build confidence and share their stories with purpose.</strong></p><p><strong>That journey led me to create the FORTE Method — a simple framework to help speakers find their message, connect with their audience and turn their words into impact.</strong></p><p><strong>Your voice is unique. Your story is valuable.</strong></p></div></div>
-    <div class="achievement"><div>2025</div><p><strong>World Championship of Public Speaking<br>2025 Semifinalist</strong><br>First woman from Toastmasters District 72 to reach the International Speech Contest Semifinals.</p><span>D72<br>NZ</span></div>
-    <div class="lessons"><article><i>01</i><h3>Your experiences become your strength</h3></article><article><i>02</i><h3>Confidence is built through action</h3></article><article><i>03</i><h3>Stories connect people</h3></article></div>
+    <section class="speech-showcase" id="semifinal-speech" aria-labelledby="speech-title">
+      <div class="speech-copy">
+        <p class="eyebrow">On the world stage · 2025</p>
+        <h3 id="speech-title">Our Power<br><em>Within.</em></h3>
+        <p>Watch my semifinal speech from the 2025 World Championship of Public Speaking.</p>
+        <a class="speech-youtube-link" href="https://www.youtube.com/watch?v=kGtIfMaK6Cg" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="speech-screen">
+        <div class="speech-player"><iframe src="https://www.youtube-nocookie.com/embed/kGtIfMaK6Cg?playsinline=1&amp;rel=0" title="Fazla Dulficar — Our Power Within — 2025 semifinal speech" width="960" height="540" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <p class="speech-caption">Fazla Dulficar <span>2025 International Speech Contest · Semifinals</span></p>
+      </div>
+    </section>
   </section>
   <section class="method section" id="method"><div class="section-label light"><span>02</span> The framework</div>
     <div class="method-heading"><div><p class="eyebrow">My FORTE Method</p><h2>Turn your voice<br>into <em>impact.</em></h2></div><p>A five-step framework for turning your ideas into a message people remember.</p></div>
