@@ -7,6 +7,7 @@
   <title>ForteSpeak | Find Your Voice</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="newsletter.css">
   <style>[hidden] { display: none !important; }</style>
 </head>
 <body>
@@ -57,7 +58,31 @@
   </section>
   <section class="final-cta" aria-labelledby="final-title"><p class="eyebrow">Make speaking your forte</p><h2 id="final-title">Ready to make speaking<br><em>your forte?</em></h2><p>Whether you have a speech in mind or simply want to become a more confident communicator, I’d love to hear what you’re working on.</p><a class="button" href="#contact">Work with me <span>→</span></a></section>
 </main>
-<footer><a class="brand" href="#top"><span>F</span> ForteSpeak</a><p>Make speaking your forte.</p><p>© 2026 ForteSpeak</p></footer>
+<footer><a class="brand" href="#top"><span>F</span> ForteSpeak</a><p>Make speaking your forte.</p><button class="newsletter-open-button" id="newsletter-open" type="button" aria-haspopup="dialog" hidden>Join my free mailing list</button><p>© 2026 ForteSpeak</p></footer>
+<dialog class="newsletter-dialog" id="newsletter-dialog" aria-labelledby="newsletter-title" aria-describedby="newsletter-description">
+  <button class="newsletter-close" id="newsletter-close" type="button" aria-label="Close mailing list popup" autofocus>×</button>
+  <div class="newsletter-layout">
+    <div class="newsletter-brand"><div class="brand" aria-label="ForteSpeak"><span aria-hidden="true">F</span>ForteSpeak</div><p>Make speaking<br>your forte.</p></div>
+    <div class="newsletter-content">
+      <p class="eyebrow dark">A little inspiration. Every two weeks.</p>
+      <h2 id="newsletter-title">Join my fortnightly<br>mailing list.<br><em>It’s free.</em></h2>
+      <p class="newsletter-description" id="newsletter-description">Speaking tips, storytelling inspiration and encouragement from Fazla, straight to your inbox.</p>
+      <form class="newsletter-form" id="newsletter-form" action="https://formsubmit.co/fathifazi96@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New ForteSpeak mailing list signup">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_url" value="https://fortespeak.com/">
+        <input type="hidden" name="signup_source" value="ForteSpeak fortnightly mailing list popup">
+        <input type="hidden" name="consent" value="By joining, I agree to receive the free fortnightly ForteSpeak emails. I can unsubscribe by replying to any email.">
+        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label for="newsletter-name">Your name</label><input id="newsletter-name" name="name" autocomplete="name" maxlength="120" placeholder="Your name" required>
+        <label for="newsletter-email">Email address</label><input id="newsletter-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required>
+        <button class="button" type="submit">Join for free <span aria-hidden="true">→</span></button>
+        <p class="newsletter-note">By joining, you agree to receive my free fortnightly emails. You can unsubscribe by replying to any email. Your signup is processed by FormSubmit.</p>
+      </form>
+    </div>
+  </div>
+</dialog>
 <script src="contact.js?v=2" defer></script>
+<script src="newsletter.js" defer></script>
 </body>
 </html>
