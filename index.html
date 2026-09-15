@@ -8,7 +8,14 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=3">
   <link rel="stylesheet" href="newsletter.css">
-  <style>[hidden] { display: none !important; }</style>
+  <style>
+    [hidden] { display: none !important; }
+    .hero-credential p { margin: 0; }
+    .hero-credential p + p { margin-top: 18px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .hero-actions .hero-story-button { background: transparent; color: var(--mint); border: 1px solid var(--mint); }
+    .hero-actions .hero-story-button:hover { background: rgba(159,213,198,.12); }
+  </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -19,7 +26,7 @@
 </nav></header>
 <main id="main">
   <section class="hero" id="top"><div class="orbit o1"></div><div class="orbit o2"></div>
-    <div class="hero-copy"><p class="eyebrow">Fazla Dulficar · Speaking &amp; storytelling coaching</p><h1>Find your voice.<br><em>Deliver with confidence.</em></h1><p class="hero-intro">Discover your message, shape meaningful stories and communicate with authenticity and impact.</p><p class="hero-credential"><strong>World Championship of Public Speaking Semifinalist</strong><span>2025 · Toastmasters International</span></p><a class="button" href="#contact">Work with me <span>→</span></a><a class="hero-story-link" href="#story">Read my story →</a></div>
+    <div class="hero-copy"><p class="eyebrow">Fazla Dulficar · Speaking &amp; storytelling coaching</p><h1>Find your voice.<br><em>Deliver with Confidence.</em></h1><div class="hero-credential"><p><strong>First woman from New Zealand Toastmasters District 72 to reach the International Speech Contest Semifinals</strong></p><p><strong>World Championship of Public Speaking<br>2025 Semifinalist</strong></p></div><p class="hero-intro"><strong>Discover your message, shape meaningful stories and communicate with authenticity and impact.</strong></p><div class="hero-actions"><a class="button" href="#contact">Work with me <span aria-hidden="true">→</span></a><a class="button hero-story-button" href="#story">Read my story <span aria-hidden="true">→</span></a></div></div>
     <figure class="hero-photo"><img src="assets/hero.webp" alt="Fazla Dulficar holding her semifinalist certificate beside the 2025 World Championship of Public Speaking board" width="1368" height="1824" fetchpriority="high"><figcaption>2025 World Championship of Public Speaking · Semifinalist</figcaption></figure>
   </section>
   <section class="story section" id="story"><div class="section-label"><span>01</span> The story</div>
