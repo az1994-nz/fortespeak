@@ -106,6 +106,22 @@
     .ai-vision em { color: var(--mint); }
     .ai-vision > p:last-child { max-width: 680px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: #d0dfdb; }
     @media (max-width: 800px) { .ai-restored-layout { grid-template-columns: 1fr; gap: 40px; } }
+
+    /* Consistent typography across numbered section headings. */
+    .story .story-title,
+    .method #journey-title,
+    .services #services-title,
+    .ai-restored #ai-title,
+    .contact #contact-title {
+      font-family: Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -.045em;
+    }
+    .services #services-title {
+      font-size: clamp(44px, 6vw, 80px);
+      line-height: 1.08;
+    }
+    .section-label { font-family: Arial, sans-serif; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -191,7 +207,8 @@
   </section>
   <section class="services section" id="coaching" aria-labelledby="services-title">
     <div class="services-inner">
-      <h2 id="services-title"><span>03</span> HOW I CAN HELP YOU</h2>
+      <div class="section-label light"><span>03</span> How I can help you</div>
+      <h2 id="services-title">How I can <em>help you</em></h2>
       <div class="services-grid">
         <article class="service-card">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3h8v6a4 4 0 0 1-8 0V3Z"/><path d="M8 5H4v2a4 4 0 0 0 4 4m8-6h4v2a4 4 0 0 1-4 4M12 13v5m-4 3h8m-9 0v-3h10v3"/></svg>
