@@ -37,6 +37,37 @@
     .speech-caption span { color: #d9e8e5; }
     @media (max-width: 900px) { .speech-showcase { grid-template-columns: 1fr; gap: 28px; padding: 32px; } }
     @media (max-width: 600px) { .speech-showcase { padding: 24px 16px; margin-top: 52px; } .speech-copy { padding: 0 4px; } }
+  
+    /* FORTE journey */
+    .journey-heading { max-width: 800px; margin: 0 auto 44px; text-align: center; }
+    .method .journey-heading h2 { font-size: clamp(44px, 6vw, 80px); line-height: 1.08; }
+    .journey-tagline { font: 400 clamp(22px, 2.4vw, 30px)/1.45 Georgia, serif; color: #e3efeb; margin: 26px 0 20px; }
+    .journey-intro { max-width: 680px; margin: 0 auto; color: #bed2cf; font-size: 16px; line-height: 1.85; }
+    .journey-flow { max-width: 1000px; margin: 0 auto; }
+    .journey-origin { width: fit-content; margin: 0 auto; padding: 13px 30px; border: 1px solid var(--mint); border-radius: 99px; color: var(--mint); font-size: 12px; font-weight: 700; letter-spacing: .2em; }
+    .journey-steps { list-style: none; margin: 0; padding: 0; }
+    .journey-arrow { display: block; text-align: center; color: var(--mint); font-size: 28px; line-height: 1; padding: 13px 0; }
+    .journey-card { display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: center; padding: 28px 34px; border: 1px solid #9fd5c638; border-radius: 14px; background: linear-gradient(115deg, #9fd5c610, #9fd5c604); }
+    .journey-card h3 { display: flex; align-items: center; gap: 22px; margin: 0; min-width: 0; }
+    .journey-letter { flex: 0 0 60px; width: 60px; height: 68px; display: grid; place-items: center; font: italic 48px/1 Georgia, serif; color: var(--mint); border-right: 1px solid #9fd5c644; padding-right: 18px; }
+    .journey-step-title { font-size: 14px; line-height: 1.7; letter-spacing: .09em; }
+    .journey-dash { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .journey-question { margin: 0 0 10px; color: var(--mint); font: 24px/1.25 Georgia, serif; }
+    .journey-description { margin: 0; font-size: 15px; line-height: 1.75; color: #d0dfdb; }
+    .journey-ending { max-width: 1000px; margin: 48px auto 0; padding-top: 32px; border-top: 1px solid #9fd5c638; text-align: center; }
+    .journey-summary { margin: 0; font-size: clamp(14px, 1.7vw, 18px); line-height: 2; color: #d0dfdb; text-wrap: balance; }
+    .journey-summary span { color: var(--mint); padding: 0 6px; }
+    .journey-signoff { margin: 22px 0 0; font: clamp(28px, 3.2vw, 42px)/1.3 Georgia, serif; }
+    .journey-signoff em { color: var(--mint); }
+    @media (max-width: 700px) {
+      .journey-heading { text-align: left; margin-bottom: 32px; }
+      .journey-card { grid-template-columns: 1fr; gap: 18px; padding: 24px; }
+      .journey-card h3 { gap: 18px; }
+      .journey-letter { flex-basis: 48px; width: 48px; height: 52px; font-size: 40px; padding-right: 14px; }
+      .journey-step-title { font-size: 13px; letter-spacing: .07em; }
+      .journey-question { font-size: 23px; }
+      .journey-arrow { padding: 11px 0; }
+    }
   </style>
 </head>
 <body>
@@ -68,18 +99,59 @@
       </div>
     </section>
   </section>
-  <section class="method section" id="method"><div class="section-label light"><span>02</span> The framework</div>
-    <div class="method-heading"><div><p class="eyebrow">My FORTE Method</p><h2>Turn your voice<br>into <em>impact.</em></h2></div><p>A five-step framework for turning your ideas into a message people remember.</p></div>
-    <div class="method-list">
-      <article><b>F</b><h3>Find your message</h3><p>Discover what you want your audience to remember—and why it matters.</p><i>↗</i></article>
-      <article><b>O</b><h3>Organize your story</h3><p>Shape ideas into a compelling journey, from an engaging opening to a memorable ending.</p><i>↗</i></article>
-      <article><b>R</b><h3>Reach your audience</h3><p>Speak authentically and create the emotional connection that makes a message resonate.</p><i>↗</i></article>
-      <article><b>T</b><h3>Transform through delivery</h3><p>Bring your words to life with vocal variety, purposeful pauses and confident presence.</p><i>↗</i></article>
-      <article><b>E</b><h3>Elevate with impact</h3><p>Inspire action and leave your audience with something meaningful.</p><i>↗</i></article>
+  <section class="method section" id="method" aria-labelledby="journey-title">
+    <div class="section-label light"><span>03</span> The Framework</div>
+    <div class="journey-heading">
+      <h2 id="journey-title">The FORTE <em>Journey</em></h2>
+      <p class="journey-tagline">From an idea in your head to an impact in the room.</p>
+      <p class="journey-intro">Every powerful message begins with an idea. The FORTE Method takes you through five steps to turn that idea into something your audience can understand, connect with and remember.</p>
     </div>
-    <blockquote>“Your voice is unique. Your story is valuable.<br><em>Your message matters.</em>”</blockquote>
+    <div class="journey-flow">
+      <p class="journey-origin">IDEA</p>
+      <ol class="journey-steps" role="list">
+        <li class="journey-step">
+          <span class="journey-arrow" aria-hidden="true">↓</span>
+          <article class="journey-card">
+            <h3><span class="journey-letter">F</span><span class="journey-step-title"><span class="journey-dash"> — </span>FIND YOUR MESSAGE</span></h3>
+            <div class="journey-detail"><p class="journey-question">What matters?</p><p class="journey-description">Discover the message you want your audience to remember — and why it matters.</p></div>
+          </article>
+        </li>
+        <li class="journey-step">
+          <span class="journey-arrow" aria-hidden="true">↓</span>
+          <article class="journey-card">
+            <h3><span class="journey-letter">O</span><span class="journey-step-title"><span class="journey-dash"> — </span>ORGANISE YOUR STORY</span></h3>
+            <div class="journey-detail"><p class="journey-question">What is the story?</p><p class="journey-description">Shape your ideas into a clear and compelling journey.</p></div>
+          </article>
+        </li>
+        <li class="journey-step">
+          <span class="journey-arrow" aria-hidden="true">↓</span>
+          <article class="journey-card">
+            <h3><span class="journey-letter">R</span><span class="journey-step-title"><span class="journey-dash"> — </span>REACH YOUR AUDIENCE</span></h3>
+            <div class="journey-detail"><p class="journey-question">Who am I speaking to?</p><p class="journey-description">Create a genuine connection with your audience and make your message resonate.</p></div>
+          </article>
+        </li>
+        <li class="journey-step">
+          <span class="journey-arrow" aria-hidden="true">↓</span>
+          <article class="journey-card">
+            <h3><span class="journey-letter">T</span><span class="journey-step-title"><span class="journey-dash"> — </span>TRANSFORM THROUGH DELIVERY</span></h3>
+            <div class="journey-detail"><p class="journey-question">How will I bring it to life?</p><p class="journey-description">Use your voice, pace, pauses and presence to make your words come alive.</p></div>
+          </article>
+        </li>
+        <li class="journey-step">
+          <span class="journey-arrow" aria-hidden="true">↓</span>
+          <article class="journey-card">
+            <h3><span class="journey-letter">E</span><span class="journey-step-title"><span class="journey-dash"> — </span>ELEVATE WITH IMPACT</span></h3>
+            <div class="journey-detail"><p class="journey-question">What will they take away?</p><p class="journey-description">Leave your audience with something meaningful and inspire them to act.</p></div>
+          </article>
+        </li>
+      </ol>
+    </div>
+    <div class="journey-ending">
+      <p class="journey-summary">From idea <span>→</span> message <span>→</span> connection <span>→</span> delivery <span>→</span> impact</p>
+      <p class="journey-signoff">That is the <em>FORTE journey.</em></p>
+    </div>
   </section>
-  <section class="coaching section" id="coaching"><div class="section-label"><span>03</span> Coaching</div>
+  <section class="coaching section" id="coaching"><div class="section-label"><span>04</span> Coaching</div>
     <div class="coaching-intro"><div><p class="eyebrow dark">Speaking coaching</p><h2>Ideas people<br><em>remember.</em></h2></div><p class="lead">Move from uncertainty to confidence with practical, personalised guidance.</p></div>
     <div class="coaching-grid"><article><i>01</i><h3>One-to-one coaching</h3><p>Build confidence, strengthen your message and develop a speaking style that feels authentically yours.</p></article><article><i>02</i><h3>Speech refinement</h3><p>Bring me your draft. We’ll work on structure, storytelling, language, delivery and impact.</p></article><article><i>03</i><h3>Contest coaching</h3><p>Prepare for Toastmasters and other speaking competitions with focused feedback and rehearsal.</p></article><article><i>04</i><h3>Workshops</h3><p>Interactive sessions designed around confidence, storytelling and compelling presentations.</p></article></div>
     <p class="coaching-action"><a class="button" href="#contact">Let’s work on your next speech <span>→</span></a></p>
@@ -87,7 +159,7 @@
   </section>
   <aside class="ai-teaser" id="ai" aria-labelledby="ai-title"><div><p class="eyebrow dark">Coming soon</p><h2 id="ai-title">Forte AI</h2></div><p>Speech feedback built around the FORTE Method. A future companion to your speaking journey.</p></aside>
   <section class="contact section" id="contact" aria-labelledby="contact-title">
-    <div class="section-label"><span>04</span> Work with me</div>
+    <div class="section-label"><span>05</span> Work with me</div>
     <div class="contact-grid"><div class="contact-copy"><p class="eyebrow dark">Let’s work together</p><h2 id="contact-title">Your message matters.<br><em>Let’s make it memorable.</em></h2><p class="lead">Whether you’re preparing a speech, presentation, competition, or simply want to become a more confident speaker, let’s work on it together.</p></div>
     <form class="contact-form" id="contact-form" action="https://formsubmit.co/fathifazi96@gmail.com" method="POST" aria-describedby="contact-status">
       <h3>Contact us</h3><input type="hidden" name="_url" value="https://fortespeak.com/"><input type="hidden" name="_subject" value="New ForteSpeak enquiry"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
