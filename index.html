@@ -86,6 +86,26 @@
     .services-action { margin: 38px 0 0; text-align: center; }
     @media (max-width: 1150px) { .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .service-card { padding: 32px; } }
     @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; gap: 18px; } .service-card { padding: 26px 22px; } .services h2 { margin-bottom: 30px; } .services-action { margin-top: 30px; } }
+
+    /* Full FORTE AI vision and planned feedback areas */
+    .ai-restored { background: linear-gradient(125deg, #092a32, #0b4149); min-height: 0; }
+    .ai-restored-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 7vw, 100px); align-items: start; }
+    .ai-restored-copy, .ai-feedback-list { min-width: 0; }
+    .ai-restored .ai-restored-copy h2 { font-size: clamp(42px, 5.4vw, 76px); line-height: 1.06; }
+    .ai-restored-copy > p:not(.eyebrow) { color: #d0dfdb; font-size: 16px; line-height: 1.8; max-width: 540px; }
+    .ai-restored-copy > .ai-restored-lead { font: 25px/1.5 Georgia, serif; margin-top: 28px; color: #e3efeb; }
+    .ai-restored-copy > .ai-coming-soon { display: inline-block; border: 1px solid #9fd5c666; border-radius: 99px; padding: 10px 18px; color: var(--mint); font-size: 14px; }
+    .ai-feedback-list { list-style: none; margin: 0; padding: 0; }
+    .ai-feedback-list li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 20px; padding: 23px 0; border-top: 1px solid #9fd5c644; }
+    .ai-feedback-list li:first-child { padding-top: 0; border-top: 0; }
+    .ai-feedback-letter { font: italic 36px/1.2 Georgia, serif; color: var(--mint); }
+    .ai-feedback-list h3 { font: 24px/1.3 Georgia, serif; margin: 0 0 9px; }
+    .ai-feedback-list p { margin: 0; color: #d0dfdb; font-size: 16px; line-height: 1.75; }
+    .ai-vision { border-top: 1px solid #9fd5c644; margin-top: 48px; padding-top: 36px; text-align: center; }
+    .ai-vision > p:first-child { font: clamp(26px, 3vw, 38px)/1.4 Georgia, serif; margin: 0 0 18px; }
+    .ai-vision em { color: var(--mint); }
+    .ai-vision > p:last-child { max-width: 680px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: #d0dfdb; }
+    @media (max-width: 800px) { .ai-restored-layout { grid-template-columns: 1fr; gap: 40px; } }
   </style>
 </head>
 <body>
@@ -193,7 +213,26 @@
       <p class="services-action"><a class="button" href="#contact">Let’s work together <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
-  <aside class="ai-teaser" id="ai" aria-labelledby="ai-title"><div><p class="eyebrow dark">Coming soon</p><h2 id="ai-title">Forte AI</h2></div><p>Speech feedback built around the FORTE Method. A future companion to your speaking journey.</p></aside>
+  <section class="ai-section section ai-restored" id="ai" aria-labelledby="ai-title">
+    <div class="section-label light"><span>05</span> Forte AI · Coming soon</div>
+    <div class="ai-restored-layout">
+      <div class="ai-restored-copy">
+        <p class="eyebrow">Forte AI</p>
+        <h2 id="ai-title">The future of<br>speech <em>refinement.</em></h2>
+        <p class="ai-restored-lead">AI-powered speech feedback based on the FORTE Method.</p>
+        <p>Forte AI is being developed to help you refine your message, strengthen your stories and communicate with greater confidence. Future capabilities will include feedback across all five stages of the FORTE Method.</p>
+        <p class="ai-coming-soon">Coming soon · Planned capabilities</p>
+      </div>
+      <ol class="ai-feedback-list" aria-label="Planned FORTE AI feedback areas">
+        <li><span class="ai-feedback-letter" aria-hidden="true">F</span><div><h3>Find Your Message</h3><p>Analyse your speech to clarify your central message and bring your strongest ideas into focus.</p></div></li>
+        <li><span class="ai-feedback-letter" aria-hidden="true">O</span><div><h3>Organise Your Story</h3><p>Strengthen your storytelling, structure and flow so your audience can follow your ideas.</p></div></li>
+        <li><span class="ai-feedback-letter" aria-hidden="true">R</span><div><h3>Reach Your Audience</h3><p>Explore ways to build emotional connection and make your message resonate with your audience.</p></div></li>
+        <li><span class="ai-feedback-letter" aria-hidden="true">T</span><div><h3>Transform Through Delivery</h3><p>Refine your pace, pauses, vocal variety and presentation techniques to bring your speech to life.</p></div></li>
+        <li><span class="ai-feedback-letter" aria-hidden="true">E</span><div><h3>Elevate Your Impact</h3><p>Make your message more memorable and shape a conclusion that leaves a lasting impression.</p></div></li>
+      </ol>
+    </div>
+    <div class="ai-vision"><p>Technology can provide feedback.<br><em>But humans create connection.</em></p><p>Forte AI is not designed to replace the human voice — it is designed to help every voice become stronger.</p></div>
+  </section>
   <section class="contact section" id="contact" aria-labelledby="contact-title">
     <div class="section-label"><span>05</span> Work with me</div>
     <div class="contact-grid"><div class="contact-copy"><p class="eyebrow dark">Let’s work together</p><h2 id="contact-title">Your message matters.<br><em>Let’s make it memorable.</em></h2><p class="lead">Whether you’re preparing a speech, presentation, competition, or simply want to become a more confident speaker, let’s work on it together.</p></div>
