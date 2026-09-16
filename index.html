@@ -70,7 +70,10 @@
     }
 
     /* Four ways to work together */
-    .services { background: linear-gradient(110deg, rgba(14, 91, 106, .88), rgba(31, 116, 129, .80)), url("assets/story.webp") center 38% / cover no-repeat; color: white; }
+    .services { position: relative; isolation: isolate; overflow: hidden; background: radial-gradient(ellipse at 90% 10%, #338e8d55, transparent 55%), linear-gradient(125deg, #104b58, #176e78 60%, #10505d); color: white; }
+    .services::before, .services::after { content: ""; position: absolute; z-index: -1; width: 580px; height: 580px; border: 1px solid #b6e7d929; border-radius: 50%; pointer-events: none; }
+    .services::before { top: -380px; right: -100px; box-shadow: 0 0 0 65px #b6e7d908, 0 0 0 130px #b6e7d906; }
+    .services::after { bottom: -420px; left: -160px; box-shadow: 0 0 0 70px #b6e7d908, 0 0 0 140px #b6e7d905; }
     .services-inner { max-width: 1320px; margin: 0 auto; }
     .services h2 { margin: 0 0 46px; text-align: center; font: 600 clamp(25px, 3vw, 40px)/1.25 Arial, sans-serif; letter-spacing: .025em; text-wrap: balance; }
     .services h2 > span { display: inline-block; color: var(--mint); font-size: .55em; vertical-align: middle; margin-right: 14px; letter-spacing: .1em; }
