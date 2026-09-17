@@ -158,6 +158,14 @@
     .ai-restored .ai-score-rows strong { font-size: 18px; }
     .ai-restored .ai-score-track { height: 8px; }
     @media (max-width: 700px) { .ai-restored .ai-restored-layout { grid-template-columns: 1fr; gap: 30px; } .ai-restored .ai-score-panel { width: 100%; max-width: 430px; } }
+
+    /* Readable numbered section labels across all five sections. */
+    .section-label {
+      font-size: clamp(16px, 1.5vw, 20px);
+      line-height: 1.5;
+      letter-spacing: .12em;
+      align-items: baseline;
+    }
   </style>
 </head>
 <body>
