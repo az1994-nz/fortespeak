@@ -89,7 +89,7 @@
 
     /* Full FORTE AI vision and planned feedback areas */
     .ai-restored { background: linear-gradient(125deg, #092a32, #0b4149); min-height: 0; }
-    .ai-restored-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 7vw, 100px); align-items: center; }
+    .ai-restored-layout { display: block; max-width: 760px; }
     .ai-restored-copy, .ai-feedback-list { min-width: 0; }
     .ai-restored .ai-restored-copy h2 { font-size: clamp(42px, 5.4vw, 76px); line-height: 1.06; }
     .ai-restored-copy > p:not(.eyebrow) { color: #d0dfdb; font-size: 16px; line-height: 1.8; max-width: 540px; }
@@ -248,16 +248,9 @@
       <p class="services-action"><a class="button" href="#contact">Let’s work together <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
-  <section class="ai-section section ai-restored" id="ai" aria-labelledby="ai-title">
-    <div class="section-label light"><span>04</span> Forte AI · Coming soon</div>
+  <section class="ai-section section ai-restored" id="ai" aria-labelledby="ai-section-title">
+    <div class="section-label light" id="ai-section-title"><span>04</span> Forte AI · Coming soon</div>
     <div class="ai-restored-layout">
-      <div class="ai-restored-copy">
-        <p class="eyebrow">Forte AI</p>
-        <h2 id="ai-title">The future of<br>speech <em>refinement.</em></h2>
-        <p class="ai-restored-lead">AI-powered speech feedback based on the FORTE Method.</p>
-        <p>Forte AI is being developed to help you refine your message, strengthen your stories and communicate with greater confidence. Future capabilities will include feedback across all five stages of the FORTE Method.</p>
-        <p class="ai-coming-soon">Coming soon · Planned capabilities</p>
-      </div>
       <div class="ai-score-panel" aria-labelledby="ai-score-title">
         <div class="ai-score-heading"><h3 id="ai-score-title">FORTE speech analysis</h3><span>Example scores</span></div>
         <p class="ai-score-explainer">An example of how Forte AI will analyse your speech using the FORTE Method.</p>
@@ -271,7 +264,6 @@
         </ul>
       </div>
     </div>
-    <div class="ai-vision><p>Technology can provide feedback.<br><em>But humans create connection.</em></p><p>Forte AI is not designed to replace the human voice — it is designed to help every voice become stronger.</p></div>
   </section>
   <section class="contact section" id="contact" aria-labelledby="contact-title">
     <div class="section-label"><span>05</span> Work with me</div>
