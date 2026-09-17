@@ -166,6 +166,62 @@
       letter-spacing: .12em;
       align-items: baseline;
     }
+
+    /* Site-wide typography and colour refinement. */
+    :root { --ink: #172d38; --navy: #092b39; --teal: #08676b; --mint: #b2ead6; --cream: #eef3f2; --paper: #fafcfc; --orange: #bd482a; --line: #193f4d26; --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+    body { font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+    h1, h2, .story .story-title, .method #journey-title, .services #services-title, .contact #contact-title, .ai-compact-heading h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+    h1 { letter-spacing: -.045em; }
+    .hero { background: radial-gradient(ellipse at 85% 30%, #14747a66, transparent 55%), linear-gradient(125deg, #092b39, #104b58 65%, #0b6269); }
+    .hero-intro { color: #e0eeeb; }
+    .hero-intro strong { font-weight: 500; }
+    .hero-credential { border-color: var(--mint); }
+    .nav-links { font-size: 15px; gap: 28px; }
+    .nav-cta { font-size: 14px; }
+    .button { font-family: var(--font-body); font-size: 15px; font-weight: 600; padding: 16px 24px; min-height: 48px; box-shadow: 0 6px 18px #052a3414; transition: background-color .2s, box-shadow .2s, transform .2s; }
+    .button:hover { box-shadow: 0 9px 22px #052a3429; }
+    .eyebrow { font-size: 13px; line-height: 1.6; letter-spacing: .16em; }
+    .section-label { font-family: var(--font-body); font-size: clamp(16px, 1.5vw, 20px); font-weight: 600; letter-spacing: .1em; margin-bottom: 48px; color: #315965; }
+    .section-label > span { color: var(--teal); font-variant-numeric: tabular-nums; font-weight: 700; }
+    .section-label.light { color: #e0f2ed; border-color: #b2ead638; }
+    .section-label.light > span { color: var(--mint); }
+    .story { background: var(--paper); }
+    .story-introduction { color: #3d626c; }
+    .prose p { font-size: 17px; line-height: 1.85; color: #405d68; }
+    .prose p strong { font-weight: 400; }
+    .prose .lead { font-size: 25px; color: var(--ink); }
+    .prose .lead strong { font-weight: 400; }
+    .speech-copy .eyebrow { font-size: 13px; }
+    .speech-caption, .hero-photo figcaption { font-size: 12px; }
+    .method { background: linear-gradient(135deg, #092b39, #103c46); }
+    .journey-card { background: #b2ead60b; border-color: #b2ead633; border-radius: 16px; }
+    .journey-step-title { font-family: var(--font-body); font-size: 15px; letter-spacing: .06em; }
+    .journey-description { font-size: 16px; color: #deebe7; }
+    .journey-intro { color: #d1e3df; font-size: 17px; }
+    .services { background: radial-gradient(ellipse at 90% 10%, #60c6b322, transparent 60%), linear-gradient(125deg, #0c505b, #116671); }
+    .service-card { background: #073b4870; border: 1px solid #b2ead654; border-radius: 16px; box-shadow: 0 12px 28px #00273018; }
+    .service-card h3 { font: 600 20px/1.4 var(--font-body); }
+    .service-card h3 span { color: #b2ead6; font-size: 14px; }
+    .service-card p { font-size: 16px; color: #e5f2ef; }
+    .service-icon { color: var(--mint); }
+    .ai-restored { background: linear-gradient(125deg, #092b39, #103c46); }
+    .ai-restored .ai-score-panel { background: linear-gradient(145deg, #19505a, #103841); border-color: #b2ead659; }
+    .ai-score-fill { background: linear-gradient(90deg, #4aa6a0, #b2ead6); }
+    .contact { background: #f0f5f4; }
+    .contact-form { background: #ffffff; border: 1px solid #d6e3e0; border-radius: 18px; box-shadow: 0 18px 50px #1438430a; }
+    .contact-form label, .newsletter-form label { font-family: var(--font-body); font-size: 14px; color: #294c58; }
+    .contact-form input, .contact-form textarea, .contact-form select, .newsletter-form input:not([type=hidden]):not(.honeypot) { font-family: var(--font-body); background: #fafcfc; border-color: #8da9af; border-radius: 8px; }
+    .contact-form h3 { color: var(--ink); }
+    .form-note { font-size: 14px; color: #4b6570; }
+    .contact-mailing-list .button { background: var(--teal); }
+    .final-cta { background: linear-gradient(120deg, #092b39, #0b505b); }
+    footer { background: #e7efed; color: #405d68; font-size: 14px; }
+    .newsletter-description { font-size: 16px; }
+    .newsletter-form .button { background: var(--orange); }
+    .newsletter-content .eyebrow { font-size: 12px; }
+    ::selection { background: #b2ead6; color: #092b39; }
+    @media (max-width: 600px) { .nav-cta { font-size: 13px; } .button { padding: 15px 21px; } .journey-step-title { font-size: 14px; } .section-label { margin-bottom: 36px; letter-spacing: .07em; } }
+    @media (prefers-reduced-motion: reduce) { .button { transition: none; } }
   </style>
 </head>
 <body>
