@@ -89,7 +89,7 @@
 
     /* Full FORTE AI vision and planned feedback areas */
     .ai-restored { background: linear-gradient(125deg, #092a32, #0b4149); min-height: 0; }
-    .ai-restored-layout { display: block; }
+    .ai-restored-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 7vw, 100px); align-items: center; }
     .ai-restored-copy, .ai-feedback-list { min-width: 0; }
     .ai-restored .ai-restored-copy h2 { font-size: clamp(42px, 5.4vw, 76px); line-height: 1.06; }
     .ai-restored-copy > p:not(.eyebrow) { color: #d0dfdb; font-size: 16px; line-height: 1.8; max-width: 540px; }
@@ -124,6 +124,21 @@
     }
     .section-label { font-family: Arial, sans-serif; font-weight: 700; }
     .ai-restored #ai-title { text-align: left; }
+
+    /* Proportional FORTE score preview. */
+    .ai-score-panel { min-width: 0; padding: clamp(24px, 3vw, 38px); border: 1px solid #9fd5c64d; border-radius: 20px; background: linear-gradient(145deg, #15535a, #0c343e); box-shadow: 0 22px 50px #001a2538; }
+    .ai-score-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 36px; }
+    .ai-score-heading h3 { font: 28px/1.25 Georgia, serif; margin: 0; }
+    .ai-score-heading > span { font-size: 12px; color: #cce9e1; padding: 7px 11px; border: 1px solid #9fd5c644; border-radius: 99px; }
+    .ai-score-columns { display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid #9fd5c633; color: #cce9e1; font-size: 14px; }
+    .ai-score-rows { list-style: none; margin: 8px 0 0; padding: 0; }
+    .ai-score-rows li { display: grid; grid-template-columns: 30px minmax(0, 1fr) 36px; align-items: center; gap: 18px; padding: 18px 0; }
+    .ai-score-letter { color: var(--mint); font: italic 32px/1 Georgia, serif; }
+    .ai-score-track { height: 10px; background: #041e2a80; border-radius: 99px; position: relative; }
+    .ai-score-fill { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #3b9a99, #b9f0d9); box-shadow: 0 0 16px #9fd5c629; }
+    .ai-score-rows strong { text-align: right; font-size: 20px; font-weight: 400; font-variant-numeric: tabular-nums; color: #effbf6; }
+    @media (max-width: 800px) { .ai-restored-layout { grid-template-columns: 1fr; } }
+    @media (max-width: 400px) { .ai-score-rows li { gap: 12px; } }
   </style>
 </head>
 <body>
@@ -242,8 +257,19 @@
         <p>Forte AI is being developed to help you refine your message, strengthen your stories and communicate with greater confidence. Future capabilities will include feedback across all five stages of the FORTE Method.</p>
         <p class="ai-coming-soon">Coming soon · Planned capabilities</p>
       </div>
+      <div class="ai-score-panel" aria-labelledby="ai-score-title">
+        <div class="ai-score-heading"><h3 id="ai-score-title">Your FORTE scores</h3><span>Example preview</span></div>
+        <div class="ai-score-columns" aria-hidden="true"><span>Tool</span><span>Score / 100</span></div>
+        <ul class="ai-score-rows" role="list">
+          <li><span class="ai-score-letter" title="Find Your Message">F</span><div class="ai-score-track" role="meter" aria-label="Find Your Message" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><span class="ai-score-fill" style="width:78%"></span></div><strong>78</strong></li>
+          <li><span class="ai-score-letter" title="Organise Your Story">O</span><div class="ai-score-track" role="meter" aria-label="Organise Your Story" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span class="ai-score-fill" style="width:60%"></span></div><strong>60</strong></li>
+          <li><span class="ai-score-letter" title="Reach Your Audience">R</span><div class="ai-score-track" role="meter" aria-label="Reach Your Audience" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88"><span class="ai-score-fill" style="width:88%"></span></div><strong>88</strong></li>
+          <li><span class="ai-score-letter" title="Transform Through Delivery">T</span><div class="ai-score-track" role="meter" aria-label="Transform Through Delivery" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><span class="ai-score-fill" style="width:70%"></span></div><strong>70</strong></li>
+          <li><span class="ai-score-letter" title="Elevate Your Impact">E</span><div class="ai-score-track" role="meter" aria-label="Elevate Your Impact" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68"><span class="ai-score-fill" style="width:68%"></span></div><strong>68</strong></li>
+        </ul>
+      </div>
     </div>
-    <div class="ai-vision"><p>Technology can provide feedback.<br><em>But humans create connection.</em></p><p>Forte AI is not designed to replace the human voice — it is designed to help every voice become stronger.</p></div>
+    <div class="ai-vision><p>Technology can provide feedback.<br><em>But humans create connection.</em></p><p>Forte AI is not designed to replace the human voice — it is designed to help every voice become stronger.</p></div>
   </section>
   <section class="contact section" id="contact" aria-labelledby="contact-title">
     <div class="section-label"><span>05</span> Work with me</div>
