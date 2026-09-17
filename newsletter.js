@@ -1,6 +1,6 @@
 (() => {
   const dialog = document.getElementById('newsletter-dialog');
-  const opener = document.getElementById('newsletter-open');
+  const openers = document.querySelectorAll('#newsletter-open, [data-newsletter-open]');
   if (!dialog || typeof dialog.showModal !== 'function') return;
   const close = document.getElementById('newsletter-close');
   const form = document.getElementById('newsletter-form');
@@ -18,8 +18,10 @@
     document.body.classList.add('newsletter-open');
     remember();
   };
-  opener.hidden = false;
-  opener.addEventListener('click', open);
+  openers.forEach((opener) => {
+    opener.hidden = false;
+    opener.addEventListener('click', open);
+  });
   close.addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', (event) => {
     const box = dialog.getBoundingClientRect();
