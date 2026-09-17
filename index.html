@@ -139,6 +139,7 @@
     .ai-score-rows strong { text-align: right; font-size: 20px; font-weight: 400; font-variant-numeric: tabular-nums; color: #effbf6; }
     @media (max-width: 800px) { .ai-restored-layout { grid-template-columns: 1fr; } }
     @media (max-width: 400px) { .ai-score-rows li { gap: 12px; } }
+    .ai-score-explainer { margin: -16px 0 28px; color: #cce9e1; font-size: 16px; line-height: 1.7; }
   </style>
 </head>
 <body>
@@ -258,7 +259,8 @@
         <p class="ai-coming-soon">Coming soon · Planned capabilities</p>
       </div>
       <div class="ai-score-panel" aria-labelledby="ai-score-title">
-        <div class="ai-score-heading"><h3 id="ai-score-title">Your FORTE scores</h3><span>Example preview</span></div>
+        <div class="ai-score-heading"><h3 id="ai-score-title">FORTE speech analysis</h3><span>Example scores</span></div>
+        <p class="ai-score-explainer">An example of how Forte AI will analyse your speech using the FORTE Method.</p>
         <div class="ai-score-columns" aria-hidden="true"><span>Tool</span><span>Score / 100</span></div>
         <ul class="ai-score-rows" role="list">
           <li><span class="ai-score-letter" title="Find Your Message">F</span><div class="ai-score-track" role="meter" aria-label="Find Your Message" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><span class="ai-score-fill" style="width:78%"></span></div><strong>78</strong></li>
