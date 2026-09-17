@@ -143,6 +143,21 @@
     .contact-form-column { min-width: 0; }
     .contact-mailing-list { margin-top: 22px; }
     .contact-mailing-list .button { background: var(--teal); border: 0; font-family: inherit; cursor: pointer; }
+
+    /* Compact AI introduction and sample score panel. */
+    .ai-restored .ai-restored-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 430px); max-width: none; gap: 48px; align-items: center; }
+    .ai-compact-heading h2 { font: 400 clamp(44px, 6vw, 80px)/1.08 Georgia, serif; letter-spacing: -.045em; text-align: left; }
+    .ai-compact-heading > p { color: var(--mint); font-size: 16px; margin: 20px 0 0; }
+    .ai-restored .ai-score-panel { padding: 24px; border-radius: 16px; }
+    .ai-restored .ai-score-heading { margin-bottom: 20px; gap: 10px; }
+    .ai-restored .ai-score-heading h3 { font-size: 22px; }
+    .ai-restored .ai-score-heading > span { padding: 5px 9px; }
+    .ai-restored .ai-score-columns { padding-bottom: 10px; }
+    .ai-restored .ai-score-rows li { padding: 11px 0; gap: 14px; grid-template-columns: 26px minmax(0, 1fr) 30px; }
+    .ai-restored .ai-score-letter { font-size: 26px; }
+    .ai-restored .ai-score-rows strong { font-size: 18px; }
+    .ai-restored .ai-score-track { height: 8px; }
+    @media (max-width: 700px) { .ai-restored .ai-restored-layout { grid-template-columns: 1fr; gap: 30px; } .ai-restored .ai-score-panel { width: 100%; max-width: 430px; } }
   </style>
 </head>
 <body>
@@ -252,11 +267,11 @@
     </div>
   </section>
   <section class="ai-section section ai-restored" id="ai" aria-labelledby="ai-section-title">
-    <div class="section-label light" id="ai-section-title"><span>04</span> Forte AI · Coming soon</div>
+    <div class="section-label light"><span>04</span> Forte AI</div>
     <div class="ai-restored-layout">
+      <div class="ai-compact-heading"><h2 id="ai-section-title">Forte <em>AI</em></h2><p>Coming soon</p></div>
       <div class="ai-score-panel" aria-labelledby="ai-score-title">
         <div class="ai-score-heading"><h3 id="ai-score-title">FORTE speech analysis</h3><span>Example scores</span></div>
-        <p class="ai-score-explainer">An example of how Forte AI will analyse your speech using the FORTE Method.</p>
         <div class="ai-score-columns" aria-hidden="true"><span>Tool</span><span>Score / 100</span></div>
         <ul class="ai-score-rows" role="list">
           <li><span class="ai-score-letter" title="Find Your Message">F</span><div class="ai-score-track" role="meter" aria-label="Find Your Message" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><span class="ai-score-fill" style="width:78%"></span></div><strong>78</strong></li>
