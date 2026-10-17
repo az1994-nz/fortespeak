@@ -222,7 +222,42 @@
     ::selection { background: #b2ead6; color: #092b39; }
     @media (max-width: 600px) { .nav-cta { font-size: 13px; } .button { padding: 15px 21px; } .journey-step-title { font-size: 14px; } .section-label { margin-bottom: 36px; letter-spacing: .07em; } }
     @media (prefers-reduced-motion: reduce) { .button { transition: none; } }
-  </style>
+  
+    /* Section 02: horizontal FORTE framework flow from the supplied reference. */
+    .method .journey-heading { max-width: 900px; margin: 0 auto 58px; text-align: center; }
+    .method .journey-heading h2 { font-size: clamp(44px, 6vw, 80px); line-height: 1.08; }
+    .method .journey-tagline { margin: 18px 0 0; font-size: clamp(19px, 2vw, 25px); color: #e3efeb; }
+    .method .journey-flow { max-width: 1120px; }
+    .method .journey-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; }
+    .method .journey-step { position: relative; min-width: 0; }
+    .method .journey-step:not(:last-child)::after { content: "→"; position: absolute; top: 20px; right: -25px; color: var(--mint); font: 30px/1 Arial, sans-serif; }
+    .method .journey-card { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 0; border: 0; border-radius: 0; background: transparent; text-align: center; }
+    .method .journey-card h3 { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 0; }
+    .method .journey-letter { display: grid; flex: 0 0 72px; place-items: center; width: 72px; height: 72px; padding: 0; border: 1px solid var(--mint); border-radius: 50%; font: italic 48px/1 Georgia, serif; color: var(--mint); }
+    .method .journey-step-title { display: block; min-height: 36px; font-size: 12px; line-height: 1.55; letter-spacing: .09em; font-weight: 700; text-transform: uppercase; }
+    .method .journey-question { margin: 12px 0 0; color: #e3efeb; font: italic 16px/1.4 Georgia, serif; }
+    .method .journey-ending { display: flex; justify-content: center; max-width: 1000px; margin: 54px auto 0; padding: 0; border: 0; }
+    .method .journey-summary { display: flex; align-items: center; justify-content: center; gap: 22px; width: 100%; margin: 0; color: #d0dfdb; font-size: 12px; line-height: 1.8; letter-spacing: .28em; text-align: center; text-transform: uppercase; }
+    .method .journey-rule { flex: 1 1 100px; max-width: 115px; height: 1px; background: #b2ead638; }
+    .method .journey-phrase { display: inline-flex; align-items: center; justify-content: center; gap: 13px; white-space: nowrap; }
+    .method .journey-phrase > span { color: var(--mint); }
+    @media (max-width: 900px) {
+      .method .journey-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 44px; }
+      .method .journey-step:nth-child(3n)::after { display: none; }
+      .method .journey-heading { text-align: center; }
+      .method .journey-ending { margin-top: 44px; }
+    }
+    @media (max-width: 600px) {
+      .method .journey-steps { grid-template-columns: 1fr; row-gap: 24px; }
+      .method .journey-step:not(:last-child)::after { position: static; display: block; width: fit-content; margin: 18px auto 0; font-size: 24px; content: "↓"; }
+      .method .journey-heading { margin-bottom: 38px; text-align: center; }
+      .method .journey-step-title { min-height: 0; }
+      .method .journey-ending { margin-top: 34px; }
+      .method .journey-summary { gap: 0; letter-spacing: .15em; }
+      .method .journey-rule { display: none; }
+      .method .journey-phrase { flex-wrap: wrap; white-space: normal; gap: 5px 8px; }
+    }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -256,53 +291,49 @@
   <section class="method section" id="method" aria-labelledby="journey-title">
     <div class="section-label light"><span>02</span> The Framework</div>
     <div class="journey-heading">
-      <h2 id="journey-title">The FORTE <em>Method</em></h2>
+      <h2 id="journey-title">The <em>FORTE</em> Method</h2>
       <p class="journey-tagline">From an idea in your head to an impact in the room.</p>
-      <p class="journey-intro">Every powerful message begins with an idea. The FORTE Method takes you through five steps to turn that idea into something your audience can understand, connect with and remember.</p>
     </div>
     <div class="journey-flow">
-      <p class="journey-origin">IDEA</p>
-      <ol class="journey-steps" role="list">
+      <ol class="journey-steps" aria-label="The five stages of the FORTE Method">
         <li class="journey-step">
-          <span class="journey-arrow" aria-hidden="true">↓</span>
           <article class="journey-card">
-            <h3><span class="journey-letter">F</span><span class="journey-step-title"><span class="journey-dash"> — </span>FIND YOUR MESSAGE</span></h3>
-            <div class="journey-detail"><p class="journey-question">What matters?</p><p class="journey-description">Discover the message you want your audience to remember — and why it matters.</p></div>
+            <h3><span class="journey-letter" aria-hidden="true">F</span><span class="journey-step-title">Find your message</span></h3>
+            <p class="journey-question">What matters?</p>
           </article>
         </li>
         <li class="journey-step">
-          <span class="journey-arrow" aria-hidden="true">↓</span>
           <article class="journey-card">
-            <h3><span class="journey-letter">O</span><span class="journey-step-title"><span class="journey-dash"> — </span>ORGANISE YOUR STORY</span></h3>
-            <div class="journey-detail"><p class="journey-question">What is the story?</p><p class="journey-description">Shape your ideas into a clear and compelling journey.</p></div>
+            <h3><span class="journey-letter" aria-hidden="true">O</span><span class="journey-step-title">Organise your story</span></h3>
+            <p class="journey-question">What is the story?</p>
           </article>
         </li>
         <li class="journey-step">
-          <span class="journey-arrow" aria-hidden="true">↓</span>
           <article class="journey-card">
-            <h3><span class="journey-letter">R</span><span class="journey-step-title"><span class="journey-dash"> — </span>REACH YOUR AUDIENCE</span></h3>
-            <div class="journey-detail"><p class="journey-question">Who am I speaking to?</p><p class="journey-description">Create a genuine connection with your audience and make your message resonate.</p></div>
+            <h3><span class="journey-letter" aria-hidden="true">R</span><span class="journey-step-title">Reach your audience</span></h3>
+            <p class="journey-question">Who am I speaking to?</p>
           </article>
         </li>
         <li class="journey-step">
-          <span class="journey-arrow" aria-hidden="true">↓</span>
           <article class="journey-card">
-            <h3><span class="journey-letter">T</span><span class="journey-step-title"><span class="journey-dash"> — </span>TRANSFORM THROUGH DELIVERY</span></h3>
-            <div class="journey-detail"><p class="journey-question">How will I bring it to life?</p><p class="journey-description">Use your voice, pace, pauses and presence to make your words come alive.</p></div>
+            <h3><span class="journey-letter" aria-hidden="true">T</span><span class="journey-step-title">Transform through delivery</span></h3>
+            <p class="journey-question">How will I bring it to life?</p>
           </article>
         </li>
         <li class="journey-step">
-          <span class="journey-arrow" aria-hidden="true">↓</span>
           <article class="journey-card">
-            <h3><span class="journey-letter">E</span><span class="journey-step-title"><span class="journey-dash"> — </span>ELEVATE WITH IMPACT</span></h3>
-            <div class="journey-detail"><p class="journey-question">What will they take away?</p><p class="journey-description">Leave your audience with something meaningful and inspire them to act.</p></div>
+            <h3><span class="journey-letter" aria-hidden="true">E</span><span class="journey-step-title">Elevate with impact</span></h3>
+            <p class="journey-question">What will they take away?</p>
           </article>
         </li>
       </ol>
     </div>
     <div class="journey-ending">
-      <p class="journey-summary">From idea <span>→</span> message <span>→</span> connection <span>→</span> delivery <span>→</span> impact</p>
-      <p class="journey-signoff">That is the <em>FORTE journey.</em></p>
+      <p class="journey-summary">
+        <span class="journey-rule" aria-hidden="true"></span>
+        <span class="journey-phrase">Idea <span aria-hidden="true">→</span> Message <span aria-hidden="true">→</span> Connection <span aria-hidden="true">→</span> Delivery <span aria-hidden="true">→</span> Impact</span>
+        <span class="journey-rule" aria-hidden="true"></span>
+      </p>
     </div>
   </section>
   <section class="services section" id="coaching" aria-labelledby="services-title">
